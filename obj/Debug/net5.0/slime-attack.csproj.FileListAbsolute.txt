@@ -1,8 +1,3 @@
-C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.csproj.AssemblyReference.cache
-C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.GeneratedMSBuildEditorConfig.editorconfig
-C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.AssemblyInfoInputs.cache
-C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.AssemblyInfo.cs
-C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.csproj.CoreCompileInputs.cache
 C:\codelouisville\slime-attack\bin\Debug\net5.0\slime-attack.exe
 C:\codelouisville\slime-attack\bin\Debug\net5.0\slime-attack.deps.json
 C:\codelouisville\slime-attack\bin\Debug\net5.0\slime-attack.runtimeconfig.json
@@ -10,6 +5,11 @@ C:\codelouisville\slime-attack\bin\Debug\net5.0\slime-attack.runtimeconfig.dev.j
 C:\codelouisville\slime-attack\bin\Debug\net5.0\slime-attack.dll
 C:\codelouisville\slime-attack\bin\Debug\net5.0\ref\slime-attack.dll
 C:\codelouisville\slime-attack\bin\Debug\net5.0\slime-attack.pdb
+C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.csproj.AssemblyReference.cache
+C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.GeneratedMSBuildEditorConfig.editorconfig
+C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.AssemblyInfoInputs.cache
+C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.AssemblyInfo.cs
+C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.csproj.CoreCompileInputs.cache
 C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.dll
 C:\codelouisville\slime-attack\obj\Debug\net5.0\ref\slime-attack.dll
 C:\codelouisville\slime-attack\obj\Debug\net5.0\slime-attack.pdb

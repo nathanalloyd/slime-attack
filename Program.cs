@@ -8,7 +8,7 @@ namespace slime_attack
         static void Main(string[] args)
         {
             int desiredWidth = 110;
-            int desiredHeight = 55;
+            int desiredHeight = 58;
             try
             {
                 WindowHeight = desiredHeight;

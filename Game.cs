@@ -33,9 +33,9 @@ namespace slime_attack
               ░      ░  ░ ░         ░      ░  ░         ░  ░                       ░  ░░ ░      ░  ░   
                                                                                        ░               
 
-         A giant slime is attacking Earth! You must defeat it before everything you know and love is 
-         destroyed. Use the ARROW KEYS to highlight the desired action, and press ENTER to select the
-         action. For the best experience it is recommended that you play in full screen. Good Luck!
+         A giant slime is attacking! You must defeat it before everything you know and love is destroyed.
+         Use the ARROW KEYS to highlight the desired action, and press ENTER to select the action. Your
+         village is counting on you. Good Luck!
 ";
             
             string[] options = { "\t [Play]", "\t [About]", "\t [Exit]" };
@@ -63,16 +63,16 @@ namespace slime_attack
 
 
 
-            ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  
-           ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
-          ▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
-          ░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  
-          ░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
-           ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
-            ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
-          ░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ 
-                ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     
-                                                               ░                   
+                    ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  
+                   ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+                  ▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+                  ░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  
+                  ░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
+                   ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+                    ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+                  ░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ 
+                        ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     
+                                                                       ░                   
 ");
             WriteLine("\t Press any key to return to the Main Menu.");
             ReadKey(true);
@@ -109,9 +109,11 @@ namespace slime_attack
 
 ");
             WriteLine("");
-            WriteLine("\t You attacked the slime causing 1 damage.");
+            WriteLine("\t You attack the slime causing 1 damage.");
+            WriteLine("\t You manage to free your weapon from the ooze and prepare for the next blow.");
             WriteLine("");
-            WriteLine("\t The slime attacked you! You took 1 damage.");
+            WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
+            WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -124,42 +126,44 @@ namespace slime_attack
             WriteLine(@"    
 
 
-                                                                   .''''.
-                                                                  /,.--. )
-                                             .'``.        __   __((\- -(\)
-                                    _______.'     \_.-''''  ``'  /)) - .\|
-                   __....::::::::::'''''''/    .   \'''''''::::::(/ `-'`.)
-                .:'::.  .  o ~ .  ~  o ~ /    /     '.o ~ . _.....--- `  \
-                 ':. ':::::.___.____,___/   ,'_\      \ _.-'___..___..._,'
-                   ':.  o~  `::::::::::::::::::::::::::::::::::::::::'  (\
-                    `':.  o ~  o   ..   o  ,  ~  \ . o~   -.  ~   .'.:'\'(
-                       ':.  ,..   o  ~   o  . ,  'o.    ~ o   ~ o'.:'  \(/
-                         '.   o   ~   .    ~    o ~ ',o :  :  .' .' ('\/ |
-                           '-._    ~    o  , o  ,  .  ~._ _.o_.-'  \/ ) (
-                               '- .._  .    ~    ~      _.. -'
-                                     ''' - .,.,. - '''
-                                          (:' .:)
-                                           :| '|
-                                           |. ||
-                                           || :|
-                                           :| |'
-                                           || :|
-                                           '| ||
-                                           |: ':
-                                           || :|
-                                     __..--:| |'--..__
-                               _...-'  _.' |' :| '.__ '-..._
-                             / -  ..---    '''''   ---...  _ \
-                             \  _____  ..--   --..     ____  /
-                              '-----....._________.....-----'
+                                                                           .''''.
+                                                                          /,.--. )
+                                                     .'``.        __   __((\- -(\)
+                                            _______.'     \_.-''''  ``'  /)) - .\|
+                           __....::::::::::'''''''/    .   \'''''''::::::(/ `-'`.)
+                        .:'::.  .  o ~ .  ~  o ~ /    /     '.o ~ . _.....--- `  \
+                         ':. ':::::.___.____,___/   ,'_\      \ _.-'___..___..._,'
+                           ':.  o~  `::::::::::::::::::::::::::::::::::::::::'  (\
+                            `':.  o ~  o   ..   o  ,  ~  \ . o~   -.  ~   .'.:'\'(
+                               ':.  ,..   o  ~   o  . ,  'o.    ~ o   ~ o'.:'  \(/
+                                 '.   o   ~   .    ~    o ~ ',o :  :  .' .' ('\/ |
+                                   '-._    ~    o  , o  ,  .  ~._ _.o_.-'  \/ ) (
+                                       '- .._  .    ~    ~      _.. -'
+                                             ''' - .,.,. - '''
+                                                  (:' .:)
+                                                   :| '|
+                                                   |. ||
+                                                   || :|
+                                                   :| |'
+                                                   || :|
+                                                   '| ||
+                                                   |: ':
+                                                   || :|
+                                             __..--:| |'--..__
+                                       _...-'  _.' |' :| '.__ '-..._
+                                     / -  ..---    '''''   ---...  _ \
+                                     \  _____  ..--   --..     ____  /
+                                      '-----....._________.....-----'
                             
 
 
 ");
             WriteLine("");
-            WriteLine("\t You consumed a fairy potion, restoring 10 hitpoints.");
+            WriteLine("\t You drink a fairy potion, restoring 5 hitpoints. You feel your strength return.");
+            WriteLine("\t You thank the fairy as she flies off before returning your attention to the giant slime.");
             WriteLine("");
-            WriteLine("\t The slime attacked you! You took 1 damage.");
+            WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
+            WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -201,7 +205,9 @@ namespace slime_attack
 
 
 ");
-            WriteLine("\t You ran away like a coward. Fortunately your overwhelming sense of failure is cut short by death.");
+            WriteLine("\t You are overcome with terror and attempt to run. Unfortunately, your back is unprotected.");
+            WriteLine("\t You watch in horror as your body begins to melt away. Your final thoughts are of your loved ones");
+            WriteLine("\t who will soon share your fate. Despair fades to nothingness as you are embraced by the void.");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -273,12 +279,14 @@ namespace slime_attack
                 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▒▒▒░░▒▒▒▒▒▒▓▓▓▓▓▓  
                       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒          
                                       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒                    
-                                                                                  
+                                          
 
-
+                                      Slime Health [####################]
 
 
          The slime glares menacingly at you. What do you do?
+        
+         Health [##########]
 ";
             string[] options = { "\t [Attack]", "\t [Item]", "\t [Escape]" };
             Menu attackMenu = new Menu(prompt, options);
