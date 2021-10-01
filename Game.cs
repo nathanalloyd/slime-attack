@@ -9,6 +9,8 @@ namespace slime_attack
 {
     class Game
     {
+        int playerHealth = 10;
+        int slimeHealth = 20;
         public void Start()
         {
             Title = "Slime Attack";
@@ -74,7 +76,9 @@ namespace slime_attack
                         ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     
                                                                        ░                   
 ");
-            WriteLine("\t Press any key to return to the Main Menu.");
+            playerHealth = 10;
+            slimeHealth = 20;
+            WriteLine("\t\t Press any key to return to the Main Menu.");
             ReadKey(true);
             RunMainMenu();
         }
@@ -108,6 +112,8 @@ namespace slime_attack
 
 
 ");
+            slimeHealth = slimeHealth - 1;
+            playerHealth = playerHealth - 1;
             WriteLine("");
             WriteLine("\t You attack the slime causing 1 damage.");
             WriteLine("\t You manage to free your weapon from the ooze and prepare for the next blow.");
@@ -115,9 +121,23 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
+            WriteLine("\t Your health:" + playerHealth + "/10");
+            WriteLine("\t Slime health:" + slimeHealth + "/20");
+            WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
-            RunFirstChoice();
+            if (slimeHealth == 0)
+            {
+                Victory();
+            }
+            else if (playerHealth == 0)
+            {
+                Death();
+            }
+            else
+            {
+                RunFirstChoice();
+            }
         }
 
         private void Item()
@@ -158,12 +178,25 @@ namespace slime_attack
 
 
 ");
+            if (playerHealth == 10)
+            { playerHealth = playerHealth + 0; }
+            else if (playerHealth == 9)
+            { playerHealth = playerHealth + 1; }
+            else if (playerHealth == 8)
+            { playerHealth = playerHealth + 2; }
+            else if (playerHealth == 7)
+            { playerHealth = playerHealth + 3; }
+            else
+            { playerHealth = playerHealth + 4; }
             WriteLine("");
-            WriteLine("\t You drink a fairy potion, restoring 5 hitpoints. You feel your strength return.");
+            WriteLine("\t You drink a fairy potion, restoring 5 health. You feel your strength return.");
             WriteLine("\t You thank the fairy as she flies off before returning your attention to the giant slime.");
             WriteLine("");
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
+            WriteLine("");
+            WriteLine("\t Your health:" + playerHealth + "/10");
+            WriteLine("\t Slime health:" + slimeHealth + "/20");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -208,6 +241,78 @@ namespace slime_attack
             WriteLine("\t You are overcome with terror and attempt to run. Unfortunately, your back is unprotected.");
             WriteLine("\t You watch in horror as your body begins to melt away. Your final thoughts are of your loved ones");
             WriteLine("\t who will soon share your fate. Despair fades to nothingness as you are embraced by the void.");
+            WriteLine("");
+            WriteLine("\t Press any key to continue.");
+            ReadKey(true);
+            GameOver();
+        }
+
+        private void Victory()
+        {
+            Clear();
+            WriteLine(@" 
+
+
+                     (`-.                     .-') _                _  .-')               ,---. 
+                   _(OO  )_                  (  OO) )              ( \( -O )              |   | 
+               ,--(_/   ,. \ ,-.-')   .-----./     '._  .-'),-----. ,------.   ,--.   ,--.|   | 
+               \   \   /(__/ |  |OO) '  .--./|'--...__)( OO'  .-.  '|   /`. '   \  `.'  / |   | 
+                \   \ /   /  |  |  \ |  |('-.'--.  .--'/   |  | |  ||  /  | | .-')     /  |   | 
+                 \   '   /,  |  |(_//_) |OO  )  |  |   \_) |  |\|  ||  |_.' |(OO  \   /   |  .' 
+                  \     /__),|  |_.'||  |`-'|   |  |     \ |  | |  ||  .  '.' |   /  /\_  `--'  
+                   \   /   (_|  |  (_'  '--'\   |  |      `'  '-'  '|  |\  \  `-./  /.__) .--.  
+                    `-'      `--'     `-----'   `--'        `-----' `--' '--'   `--'      '--' 
+
+");
+            playerHealth = 10;
+            slimeHealth = 20;
+            WriteLine("\t Congratulations! You persevered in the face of danger and defeated the giant slime.");
+            WriteLine("\t You protected your loved ones along with countless others who may never know of your deeds.");
+            WriteLine("\t You return home knowing that the world is safe once more.");
+            WriteLine("");
+            WriteLine("\t Press any key to return to the Main Menu.");
+            ReadKey(true);
+            RunMainMenu();
+        }
+
+        private void Death()
+        {
+            Clear();
+            WriteLine(@"
+
+                                                    ░░░░                    
+                                                    ▒▒▒▒                    
+                                  ░░░░              ▓▓▓▓▒▒                  
+                                  ▒▒▓▓▒▒░░            ██▒▒░░                
+                              ░░░░    ▒▒▓▓▒▒░░░░      ▒▒▒▒░░                
+                              ▓▓▓▓▒▒▒▒░░░░▓▓▓▓▒▒▒▒▒▒▒▒▒▒░░░░░░              
+                              ▒▒░░░░▓▓▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒░░              
+                              ░░██▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒              
+                                  ░░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒░░            
+                                    ▒▒▒▒▒▒██▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒░░░░░░░░    
+                                  ▓▓▓▓▓▓▒▒▓▓▓▓▒▒▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒░░░░░░░░░░
+                                  ░░▓▓▓▓████████▓▓██▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒░░░░
+                                    ░░░░    ░░▒▒▓▓██████▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒
+                                      ░░    ░░░░  ░░    ░░░░▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒
+                                      ░░      ░░░░░░            ▓▓▓▓▓▓▓▓▓▓▓▓
+                                            ░░░░░░░░              ░░▓▓██▓▓▓▓
+                                        ░░  ░░░░░░░░                    ▒▒██
+                                        ░░    ░░░░░░                        
+                                          ░░░░░░░░░░                        
+                                          ░░░░░░░░░░                        
+                                          ░░░░░░░░░░                        
+                                          ░░░░░░░░░░                        
+                                          ░░░░░░░░░░                        
+                                          ░░░░░░░░░░                        
+                                            ░░░░░░░░                        
+                                            ░░▒▒▒▒                          
+
+
+
+");
+            WriteLine("\t You fought valiantly, but your strength has left you. As you succumb to your wounds, you wonder");
+            WriteLine("\t why you didn't make use of your magical fairy potions located in your ITEMS tab. Your vision goes");
+            WriteLine("\t dark as your flesh melts into the ground.");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -281,17 +386,15 @@ namespace slime_attack
                                       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒                    
                                           
 
-                                      Slime Health [####################]
-
+                                      
 
          The slime glares menacingly at you. What do you do?
-        
-         Health [##########]
+         
 ";
             string[] options = { "\t [Attack]", "\t [Item]", "\t [Escape]" };
             Menu attackMenu = new Menu(prompt, options);
             int selectedIndex = attackMenu.Run();
-
+            
             switch (selectedIndex)
             {
                 case 0:
