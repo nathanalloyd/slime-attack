@@ -121,8 +121,8 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
-            WriteLine("\t Your health:" + playerHealth + "/10");
-            WriteLine("\t Slime health:" + slimeHealth + "/20");
+            WriteLine("\t Your health: [ " + playerHealth + "/10 ]");
+            WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -195,8 +195,8 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
-            WriteLine("\t Your health:" + playerHealth + "/10");
-            WriteLine("\t Slime health:" + slimeHealth + "/20");
+            WriteLine("\t Your health: [ " + playerHealth + "/10 ]");
+            WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -391,6 +391,8 @@ namespace slime_attack
          The slime glares menacingly at you. What do you do?
          
 ";
+            WriteLine("test");
+
             string[] options = { "\t [Attack]", "\t [Item]", "\t [Escape]" };
             Menu attackMenu = new Menu(prompt, options);
             int selectedIndex = attackMenu.Run();
