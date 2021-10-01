@@ -121,7 +121,7 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
-            WriteLine("\t Your health: [ " + playerHealth + "/10 ]");
+            WriteLine("\t Your health:  [ " + playerHealth + "/10 ]");
             WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
@@ -195,7 +195,7 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
-            WriteLine("\t Your health: [ " + playerHealth + "/10 ]");
+            WriteLine("\t Your health:  [ " + playerHealth + "/10 ]");
             WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]");
             WriteLine("");
             WriteLine("\t Press any key to continue.");
