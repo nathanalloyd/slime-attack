@@ -41,6 +41,7 @@ namespace slime_attack
 ";
             
             string[] options = { "\t [Play]", "\t [About]", "\t [Exit]" };
+            List<string> optionsRange = new List<string>(options);
             Menu mainMenu = new Menu(prompt, options);
             int selectedIndex = mainMenu.Run();
 
@@ -391,12 +392,11 @@ namespace slime_attack
          The slime glares menacingly at you. What do you do?
          
 ";
-            WriteLine("test");
 
             string[] options = { "\t [Attack]", "\t [Item]", "\t [Escape]" };
             Menu attackMenu = new Menu(prompt, options);
             int selectedIndex = attackMenu.Run();
-            
+
             switch (selectedIndex)
             {
                 case 0:
