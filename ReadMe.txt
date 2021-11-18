@@ -7,7 +7,7 @@ Features include:
 A master loop - see Menu.cs for details.
 The title menu and the game menu both allow players to enter commands.
 
-Create a list and retrieve values - See line 44 of Game.cs.
+Create a list - See line 44 of Game.cs.
 
 Calculate and display data based on external factors - see Game.cs for details.
 Both player health and enemy health are re-calculated based on player choices.

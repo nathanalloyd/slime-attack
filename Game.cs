@@ -11,6 +11,9 @@ namespace slime_attack
     {
         int playerHealth = 10;
         int slimeHealth = 20;
+        string PlayerHealthBar;
+        string SlimeHealthBar;
+
         public void Start()
         {
             Title = "Slime Attack";
@@ -115,6 +118,134 @@ namespace slime_attack
 ");
             slimeHealth = slimeHealth - 1;
             playerHealth = playerHealth - 1;
+            if (playerHealth > 9)
+            {
+                PlayerHealthBar = "[[][][][][][][][][][]]";
+            }
+            else if (playerHealth > 8)
+            {
+                PlayerHealthBar = "[[][][][][][][][][]  ]";
+            }
+            else if (playerHealth > 7)
+            {
+                PlayerHealthBar = "[[][][][][][][][]    ]";
+            }
+            else if (playerHealth > 6)
+            {
+                PlayerHealthBar = "[[][][][][][][]      ]";
+            }
+            else if (playerHealth > 5)
+            {
+                PlayerHealthBar = "[[][][][][][]        ]";
+            }
+            else if (playerHealth > 4)
+            {
+                PlayerHealthBar = "[[][][][][]          ]";
+            }
+            else if (playerHealth > 3)
+            {
+                PlayerHealthBar = "[[][][][]            ]";
+            }
+            else if (playerHealth > 2)
+            {
+                PlayerHealthBar = "[[][][]              ]";
+            }
+            else if (playerHealth > 1)
+            {
+                PlayerHealthBar = "[[][]                ]";
+            }
+            else if (playerHealth > 0)
+            {
+                PlayerHealthBar = "[[]                  ]";
+            }
+            else if (playerHealth == 0)
+            {
+                PlayerHealthBar = "[                    ]";
+            }
+            if (slimeHealth > 19) 
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][][][][]]";
+            }
+            else if (slimeHealth > 18)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][][][]  ]";
+            }
+            else if (slimeHealth > 17)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][][]    ]";
+            }
+            else if (slimeHealth > 16)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][]      ]";
+            }
+            else if (slimeHealth > 15)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][]        ]";
+            }
+            else if (slimeHealth > 14)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][]          ]";
+            }
+            else if (slimeHealth > 13)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][]            ]";
+            }
+            else if (slimeHealth > 12)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][]              ]";
+            }
+            else if (slimeHealth > 11)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][]                ]";
+            }
+            else if (slimeHealth > 10)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][]                  ]";
+            }
+            else if (slimeHealth > 9)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][]                    ]";
+            }
+            else if (slimeHealth > 8)
+            {
+                SlimeHealthBar = "[[][][][][][][][][]                      ]";
+            }
+            else if (slimeHealth > 7)
+            {
+                SlimeHealthBar = "[[][][][][][][][]                        ]";
+            }
+            else if (slimeHealth > 6)
+            {
+                SlimeHealthBar = "[[][][][][][][]                          ]";
+            }
+            else if (slimeHealth > 5)
+            {
+                SlimeHealthBar = "[[][][][][][]                            ]";
+            }
+            else if (slimeHealth > 4)
+            {
+                SlimeHealthBar = "[[][][][][]                              ]";
+            }
+            else if (slimeHealth > 3)
+            {
+                SlimeHealthBar = "[[][][][]                                ]";
+            }
+            else if (slimeHealth > 2)
+            {
+                SlimeHealthBar = "[[][][]                                  ]";
+            }
+            else if (slimeHealth > 1)
+            {
+                SlimeHealthBar = "[[][]                                    ]";
+            }
+            else if (slimeHealth > 0)
+            {
+                SlimeHealthBar = "[[]                                      ]";
+            }
+            else if (slimeHealth == 0)
+            {
+                SlimeHealthBar = "[                                        ]";
+            }
             WriteLine("");
             WriteLine("\t You attack the slime causing 1 damage.");
             WriteLine("\t You manage to free your weapon from the ooze and prepare for the next blow.");
@@ -122,8 +253,8 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
-            WriteLine("\t Your health:  [ " + playerHealth + "/10 ]");
-            WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]");
+            WriteLine("\t Your health:  [ " + playerHealth + "/10 ]  " + PlayerHealthBar);
+            WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]  " + SlimeHealthBar);
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
@@ -189,6 +320,134 @@ namespace slime_attack
             { playerHealth = playerHealth + 3; }
             else
             { playerHealth = playerHealth + 4; }
+            if (playerHealth > 9)
+            {
+                PlayerHealthBar = "[[][][][][][][][][][]]";
+            }
+            else if (playerHealth > 8)
+            {
+                PlayerHealthBar = "[[][][][][][][][][]  ]";
+            }
+            else if (playerHealth > 7)
+            {
+                PlayerHealthBar = "[[][][][][][][][]    ]";
+            }
+            else if (playerHealth > 6)
+            {
+                PlayerHealthBar = "[[][][][][][][]      ]";
+            }
+            else if (playerHealth > 5)
+            {
+                PlayerHealthBar = "[[][][][][][]        ]";
+            }
+            else if (playerHealth > 4)
+            {
+                PlayerHealthBar = "[[][][][][]          ]";
+            }
+            else if (playerHealth > 3)
+            {
+                PlayerHealthBar = "[[][][][]            ]";
+            }
+            else if (playerHealth > 2)
+            {
+                PlayerHealthBar = "[[][][]              ]";
+            }
+            else if (playerHealth > 1)
+            {
+                PlayerHealthBar = "[[][]                ]";
+            }
+            else if (playerHealth > 0)
+            {
+                PlayerHealthBar = "[[]                  ]";
+            }
+            else if (playerHealth == 0)
+            {
+                PlayerHealthBar = "[                    ]";
+            }
+            if (slimeHealth > 19)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][][][][]]";
+            }
+            else if (slimeHealth > 18)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][][][]  ]";
+            }
+            else if (slimeHealth > 17)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][][]    ]";
+            }
+            else if (slimeHealth > 16)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][][]      ]";
+            }
+            else if (slimeHealth > 15)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][][]        ]";
+            }
+            else if (slimeHealth > 14)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][][]          ]";
+            }
+            else if (slimeHealth > 13)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][][]            ]";
+            }
+            else if (slimeHealth > 12)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][][]              ]";
+            }
+            else if (slimeHealth > 11)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][][]                ]";
+            }
+            else if (slimeHealth > 10)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][][]                  ]";
+            }
+            else if (slimeHealth > 9)
+            {
+                SlimeHealthBar = "[[][][][][][][][][][]                    ]";
+            }
+            else if (slimeHealth > 8)
+            {
+                SlimeHealthBar = "[[][][][][][][][][]                      ]";
+            }
+            else if (slimeHealth > 7)
+            {
+                SlimeHealthBar = "[[][][][][][][][]                        ]";
+            }
+            else if (slimeHealth > 6)
+            {
+                SlimeHealthBar = "[[][][][][][][]                          ]";
+            }
+            else if (slimeHealth > 5)
+            {
+                SlimeHealthBar = "[[][][][][][]                            ]";
+            }
+            else if (slimeHealth > 4)
+            {
+                SlimeHealthBar = "[[][][][][]                              ]";
+            }
+            else if (slimeHealth > 3)
+            {
+                SlimeHealthBar = "[[][][][]                                ]";
+            }
+            else if (slimeHealth > 2)
+            {
+                SlimeHealthBar = "[[][][]                                  ]";
+            }
+            else if (slimeHealth > 1)
+            {
+                SlimeHealthBar = "[[][]                                    ]";
+            }
+            else if (slimeHealth > 0)
+            {
+                SlimeHealthBar = "[[]                                      ]";
+            }
+            else if (slimeHealth == 0)
+            {
+                SlimeHealthBar = "[                                        ]";
+            }
             WriteLine("");
             WriteLine("\t You drink a fairy potion, restoring 5 health. You feel your strength return.");
             WriteLine("\t You thank the fairy as she flies off before returning your attention to the giant slime.");
@@ -196,8 +455,8 @@ namespace slime_attack
             WriteLine("\t The slime attacks you, coating you in acid! You took 1 damage.");
             WriteLine("\t Your armor manages to protect you from disintegration, for now...");
             WriteLine("");
-            WriteLine("\t Your health:  [ " + playerHealth + "/10 ]");
-            WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]");
+            WriteLine("\t Your health:  [ " + playerHealth + "/10 ]  " + PlayerHealthBar);
+            WriteLine("\t Slime health: [ " + slimeHealth + "/20 ]  " + SlimeHealthBar);
             WriteLine("");
             WriteLine("\t Press any key to continue.");
             ReadKey(true);
